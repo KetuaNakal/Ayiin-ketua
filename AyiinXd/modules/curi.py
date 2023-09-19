@@ -36,18 +36,18 @@ async def mencuri(yins):
                 chat,
                 ids=msg_id,
             )
-            pesan=""
+            pesan=tks
             for i in target:
-                pesan=await i.message
-            file = await Ayiin.download_media(
-                target,
-                var.TEMP_DOWNLOAD_DIRECTORY,
-            )
-            await Ayiin.send_file(
-                yins.chat_id,
-                file,
-                caption=f"{pesan}\n[ SUCCESS ] - Colong Konten By Ayiin-Userbot.",
-            )
+                tks=await i.message
+                file = await Ayiin.download_media(
+                    target,
+                    var.TEMP_DOWNLOAD_DIRECTORY,
+                )
+                await Ayiin.send_file(
+                    yins.chat_id,
+                    file,
+                    caption=f"{pesan}\n[ SUCCESS ] - Colong Konten By Ayiin-Userbot.",
+                )
             await xx.delete()
             os.remove(file)
         except Exception as e:  # pylint:disable=C0103,W0703
