@@ -38,16 +38,15 @@ async def mencuri(yins):
             )
             pesan=None
             for i in target:
-                pesan=await i.message
+                pesan=i.message
             file = await Ayiin.download_media(
                 target,
                 var.TEMP_DOWNLOAD_DIRECTORY,
-                caption=pesan,
             )
             await Ayiin.send_file(
                 yins.chat_id,
                 file,
-                caption="[ SUCCESS ] - Colong Konten By Ayiin-Userbot.",
+                caption=f"{pesan}\n[ SUCCESS ] - Colong Konten By Ayiin-Userbot.",
             )
             await xx.delete()
             os.remove(file)
