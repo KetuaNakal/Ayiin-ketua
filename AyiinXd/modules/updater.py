@@ -143,7 +143,7 @@ async def upstream(event):
         xx = await eor(event, "`Memeriksa pembaruan, harap tunggu....`")
     conf = event.pattern_match.group(1).strip()
     off_repo = b64decode(
-        "aHR0cHM6Ly9naXRodWIuY29tL0F5aWluWGQvQXlpaW4tVXNlcmJvdA=="
+        "aHR0cHM6Ly9naXRodWIuY29tL0tldHVhTmFrYWwvQXlpaW4ta2V0dWE="
     ).decode("utf-8")
     force_update = False
     try:
