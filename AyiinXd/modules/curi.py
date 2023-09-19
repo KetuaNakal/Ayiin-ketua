@@ -38,7 +38,7 @@ async def mencuri(yins):
             )
             pesan=None
             for i in target:
-                pesan=i.message
+                pesan=await i.message
             file = await Ayiin.download_media(
                 target,
                 var.TEMP_DOWNLOAD_DIRECTORY,
